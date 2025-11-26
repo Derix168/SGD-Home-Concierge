@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SGD HOME CONCIERGE — Smart Home Solutions</title>
+  <meta name="description" content="SGD HOME CONCIERGE — Smart Home Solutions. More Time for What Matters. Serving Bergen County and surrounding counties." />
+  <link rel="icon" href="/images/logo.png" type="image/png" />
+
+  <style>
+    :root{
+      --primary: #0FA3A3;
+      --accent: #FFB86B;
+      --brand-dark:#064e4d;
+      --muted:#576465;
+      --bg:#f7fbfb;
+      --card:#ffffff;
+      --radius:12px;
+      --max-width:1100px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,#f8fcfd 0%,var(--bg) 100%);color:#073436;line-height:1.5}
+    .container{max-width:var(--max-width);margin:0 auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
+    .brand{display:flex;gap:14px;align-items:center}
+    .logo{display:block;height:60px;width:auto}
+    .brand-text{line-height:1}
+    .brand-text .title{font-weight:800;color:var(--brand-dark);font-size:18px}
+    .brand-text .tag{color:var(--muted);font-size:13px}
+    .brand-text .motto{color:var(--brand-dark);font-size:13px;font-weight:700;margin-top:6px}
+    nav{display:flex;gap:12px;align-items:center}
+    nav a{color:var(--muted);text-decoration:none;font-weight:700;padding:8px 12px;border-radius:10px}
+    nav a.cta{background:var(--primary);color:white}
+    nav a:hover{background:rgba(15,163,163,0.08)}
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:26px;align-items:center;padding:28px;border-radius:14px;border:1px solid rgba(15,163,163,0.06);background:linear-gradient(180deg,rgba(15,163,163,0.03), rgba(255,255,255,0.6))}
+    .hero h1{font-size:32px;margin:0 0 10px;color:var(--brand-dark)}
+    .lead{color:var(--muted);margin:0 0 12px}
+    .hero-motto{color:var(--brand-dark);font-weight:800;font-size:15px;margin:6px 0 16px}
+    .cta-row{display:flex;gap:12px}
+    .btn{background:var(--primary);color:white;padding:12px 16px;border-radius:12px;border:0;cursor:pointer;font-weight:800}
+    .btn.alt{background:transparent;color:var(--primary);border:2px solid var(--primary)}
+    .card{background:var(--card);border-radius:var(--radius);padding:16px;box-shadow:0 8px 28px rgba(6,18,22,0.04);border:1px solid rgba(6,18,22,0.03)}
+    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}
+    .service h4{margin:6px 0 6px;color:#034b49}
+    .how{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:22px}
+    .steps{display:flex;flex-direction:column;gap:10px}
+    .step{display:flex;gap:12px;align-items:flex-start}
+    .num{width:36px;height:36px;border-radius:10px;background:var(--primary);display:flex;align-items:center;justify-content:center;color:white;font-weight:800}
+    .packages{display:flex;gap:12px;margin-top:14px}
+    .pkg{flex:1;padding:14px;border-radius:12px;background:linear-gradient(180deg,#fff,#f9fdfc);border:1px solid rgba(15,163,163,0.05)}
+    .contact-grid{display:grid;grid-template-columns:1fr 360px;gap:16px;margin-top:12px}
+    input,textarea,select{padding:10px;border-radius:10px;border:1px solid #e6edf0;font-size:14px}
+    textarea{min-height:120px;resize:vertical}
+    footer{margin-top:28px;border-top:1px solid #e7f6f6;padding:18px 0;color:var(--muted);display:flex;justify-content:space-between;align-items:center}
+    .small{font-size:13px;color:var(--muted)}
+    a.link{color:var(--primary);text-decoration:none;font-weight:700}
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr}
+      .services{grid-template-columns:repeat(2,1fr)}
+      .how{grid-template-columns:1fr}
+      .contact-grid{grid-template-columns:1fr}
+      nav a:not(.cta){display:none}
+    }
+    @media (max-width:600px){
+      .services{grid-template-columns:1fr}
+      header{padding:10px 0}
+      .logo{height:48px}
+      .hero h1{font-size:24px}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <img class="logo" src="/images/logo.svg" alt="SGD HOME CONCIERGE logo" />
+        <div class="brand-text">
+          <div class="title">SGD HOME CONCIERGE</div>
+          <div class="tag">Concierge • Home Care • Peace of Mind</div>
+          <div class="motto">Smart Home Solutions. More Time for What Matters.</div>
+        </div>
+      </div>
+
+      <nav aria-label="Main navigation">
+        <a href="#services">Services</a>
+        <a href="#packages">Packages</a>
+        <a href="#contact" class="cta">Book a Consult</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="home" aria-labelledby="hero-title">
+        <div>
+          <h1 id="hero-title">Concierge services that give you time back.</h1>
+          <div class="hero-motto">Smart Home Solutions. More Time for What Matters.</div>
+          <p class="lead">SGD HOME CONCIERGE provides trusted, local support in Bergen County and surrounding counties — from VA-level assistance and package pickups to vacation checks and computer pickup coordination. We manage the details, you enjoy the time.</p>
+
+          <div class="cta-row">
+            <button class="btn" onclick="scrollToSection('contact')">Book a Free Consult</button>
+            <button class="btn alt" onclick="scrollToSection('services')">See Services</button>
+          </div>
+
+          <div style="margin-top:14px" class="card">
+            <div style="display:flex;gap:12px;align-items:center">
+              <div style="width:54px;height:54px;border-radius:10px;background:var(--primary);display:flex;align-items:center;justify-content:center;color:white;font-weight:800">✓</div>
+              <div>
+                <div style="font-weight:800;color:#034b49">Vetted partners & secure handling</div>
+                <div class="small">All subcontractors provide COIs; we maintain insurance and a fidelity bond for items handled in-house.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="card" style="display:flex;align-items:center;justify-content:center;min-height:220px">
+            <img src="/images/logo.svg" alt="SGD HOME CONCIERGE logo large" style="max-height:160px; width:auto" />
+          </div>
+        </div>
+      </section>
+
+      <section id="services" style="margin-top:22px">
+        <h2 style="margin:0 0 6px;color:#034b49">Services (initial)</h2>
+        <div class="small" style="margin-bottom:10px;color:var(--muted)">Start with VA-level in-house services plus light errands and coordination.</div>
+
+        <div class="services">
+          <div class="service card">
+            <h4>Manage Bills & Admin</h4>
+            <div class="small">VA-level bill reminders, vendor coordination, and admin support.</div>
+          </div>
+
+          <div class="service card">
+            <h4>Vacation / Home Concierge</h4>
+            <div class="small">Pre-trip prep, periodic checks, guest welcome kits and post-trip reports.</div>
+          </div>
+
+          <div class="service card">
+            <h4>Trash / Bin Service</h4>
+            <div class="small">Scheduled bin placement & retrieval on trash days (recurring or one-off).</div>
+          </div>
+
+          <div class="service card">
+            <h4>Package & Amazon Returns</h4>
+            <div class="small">Pickup, returns, drop-offs and tracking updates.</div>
+          </div>
+
+          <div class="service card">
+            <h4>Computer Pickup & Coordination</h4>
+            <div class="small">Secure pickup and handoff to vetted repair partners — we manage logistics and updates.</div>
+          </div>
+
+          <div class="service card">
+            <h4>VA Level Assistance & Graphics</h4>
+            <div class="small">Calendar management, simple graphic tasks, listings, and online research.</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="how card" style="margin-top:22px">
+        <div>
+          <h3 style="margin-top:0">How it works</h3>
+          <div class="steps">
+            <div class="step"><div class="num">1</div><div><strong>Book a consult</strong><div class="small">Tell us your needs — 10–20 minutes.</div></div></div>
+            <div class="step"><div class="num">2</div><div><strong>Agree scope & payment</strong><div class="small">Choose card on file or retainer; we confirm scheduling.</div></div></div>
+            <div class="step"><div class="num">3</div><div><strong>We execute</strong><div class="small">We perform or coordinate the service, send receipts and a short job report.</div></div></div>
+          </div>
+        </div>
+
+        <div>
+          <h4 style="margin-top:0">Popular add-ons</h4>
+          <ul style="margin:8px 0 0;padding-left:18px;color:var(--muted)">
+            <li>Same-day package delivery</li>
+            <li>Guest welcome kit setup</li>
+            <li>Key holding & secure pickup</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="packages" style="margin-top:22px">
+        <h3 style="margin-bottom:6px;color:#034b49">Packages</h3>
+        <div class="small" style="margin-bottom:8px">Starter options — custom plans available after consult.</div>
+
+        <div class="packages">
+          <div class="pkg card">
+            <h4>Starter</h4>
+            <div style="font-size:18px;font-weight:800;margin:6px 0">$149 / visit</div>
+            <div class="small">Occasional pickups, returns or light tasks.</div>
+            <div style="margin-top:10px"><button class="btn" onclick="openMail('Starter')">Request Starter</button></div>
+          </div>
+
+          <div class="pkg card">
+            <h4>Essentials</h4>
+            <div style="font-size:18px;font-weight:800;margin:6px 0">$399 / month</div>
+            <div class="small">Weekly coordination, priority booking and add-on discounts.</div>
+            <div style="margin-top:10px"><button class="btn" onclick="openMail('Essentials')">Request Essentials</button></div>
+          </div>
+
+          <div class="pkg card">
+            <h4>Signature</h4>
+            <div style="font-size:18px;font-weight:800;margin:6px 0">$999 / month</div>
+            <div class="small">Full concierge with owner-managed coordination and premium support.</div>
+            <div style="margin-top:10px"><button class="btn" onclick="openMail('Signature')">Request Signature</button></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" style="margin-top:22px">
+        <h3 style="margin-bottom:6px;color:#034b49">Contact & Booking</h3>
+
+        <div class="contact-grid">
+          <div class="card">
+            <form id="contactForm" class="contact-form" onsubmit="handleForm(event)">
+              <label class="small">Full name
+                <input id="name" type="text" required placeholder="Jane Doe" />
+              </label>
+
+              <label class="small">Email
+                <input id="email" type="email" required placeholder="you@example.com" />
+              </label>
+
+              <label class="small">Phone (optional)
+                <input id="phone" type="tel" placeholder="+1 (201) 571-6888" />
+              </label>
+
+              <label class="small">Service interest
+                <select id="interest">
+                  <option>General consult</option>
+                  <option>Starter package</option>
+                  <option>Essentials package</option>
+                  <option>Signature package</option>
+                  <option>Custom project</option>
+                </select>
+              </label>
+
+              <label class="small">Message
+                <textarea id="message" placeholder="Tell us a few details or preferred times for a call"></textarea>
+              </label>
+
+              <div style="display:flex;gap:10px;align-items:center;margin-top:8px">
+                <button class="btn" type="submit">Send request</button>
+                <div class="small">Or email: <a class="link" href="mailto:info@sgdhomeconcierge.com">info@sgdhomeconcierge.com</a></div>
+              </div>
+
+              <div id="form-feedback" class="small" style="margin-top:8px;display:none"></div>
+            </form>
+          </div>
+
+          <div class="card">
+            <h4 style="margin-top:0;color:#034b49">Quick contact</h4>
+            <p class="small">Phone: <strong>+1 (201) 571-6888</strong><br/>Email: <a class="link" href="mailto:info@sgdhomeconcierge.com">info@sgdhomeconcierge.com</a></p>
+
+            <div style="margin-top:12px">
+              <div class="small">Service area</div>
+              <ul class="small" style="padding-left:18px;margin-top:6px;color:var(--muted)">
+                <li>Bergen County and surrounding counties</li>
+              </ul>
+            </div>
+
+            <div style="margin-top:12px">
+              <div class="small">Business hours</div>
+              <div class="small">Mon–Sat 9:00 — 18:00. Emergency on-call support available.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div>
+        <div style="font-weight:800;color:var(--brand-dark)">SGD HOME CONCIERGE</div>
+        <div class="small">Careful • Convenient • Considerate</div>
+      </div>
+      <div class="small">© <span id="year"></span> SGD HOME CONCIERGE · <a class="link" href="mailto:info@sgdhomeconcierge.com">info@sgdhomeconcierge.com</a></div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    function scrollToSection(id){ const el=document.getElementById(id); if(el) el.scrollIntoView({behavior:'smooth',block:'start'}); }
+    function openMail(packageName){
+      const subject = encodeURIComponent('Inquiry — ' + packageName + ' package');
+      const body = encodeURIComponent('Hi SGD HOME CONCIERGE,%0D%0A%0D%0AI am interested in the ' + packageName + ' package. Please contact me with next steps.%0D%0A%0D%0ARegards,%0D%0A');
+      window.location.href = 'mailto:info@sgdhomeconcierge.com?subject=' + subject + '&body=' + body;
+    }
+  </script>
+</body>
+</html>
